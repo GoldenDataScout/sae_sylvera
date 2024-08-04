@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: int_projects
+    description: "Latest Status of the project including price and rating"
+    columns:
+      - name: sylvera_id
+        description: "Unique internal identifier for project."
+        tests:
+          - not_null
+          - unique
+      - name: project_name
+        description: "Name for the project, as given by the registry."
+      - name: registry_name
+        description: "Name of the registry the project is from."
+      - name: country
+        description: "Project country as given by the registry."
+      - name: category
+        description: "The Sylvera standardized category corresponding to the category found for this project on the registry."
+      - name: subcategory
+        description: "The Sylvera standardized subcategory corresponding to the subcategory found for this project on the registry."
+      - name: retired_total
+        description: "Sum of the retired credits for the project."
+      - name: permitted_total
+        description: "Sum of the permitted credits for the project."
+      - name: offset_type
+        description: "Type of the offsets associated with this project category."
+      - name: rating
+        description: "Sylvera letter rating i.e. 'AAA', 'AA', 'A' etc."
+      - name: rating_date
+        description: "The date on which the rating was first generated."
+      - name: latest_pricing
+        description: "The Latest pricing reported on the project. All vintage blended"
+
