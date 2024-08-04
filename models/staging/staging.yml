@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: stg_projects
+    description: "Staging Model for the carbon credit projects."
+    columns:
+      - name: sylvera_id
+        description: "Unique internal identifier for project."
+        tests:
+          - not_null
+          - unique
+      - name: project_name
+        description: "Name for the project, as given by the registry."
+      - name: registry_name
+        description: "Name of the registry the project is from."
+      - name: country
+        description: "Project country as given by the registry."
+      - name: category
+        description: "The Sylvera standardized category corresponding to the category found for this project on the registry."
+      - name: subcategory
+        description: "The Sylvera standardized subcategory corresponding to the subcategory found for this project on the registry."
+      - name: retired_total
+        description: "Sum of the retired credits for the project."
+      - name: permitted_total
+        description: "Sum of the permitted credits for the project."
+      - name: offset_type
+        description: "Type of the offsets associated with this project category."
