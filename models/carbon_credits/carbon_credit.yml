@@ -28,7 +28,7 @@ models:
         description: "The Latest pricing reported on the project. All vintage blended"
 
   - name: core_pricing
-    description: "Intermediary Model of the pricing information for carbon credits. This model is enriching the pricing table with project data and rating data"
+    description: "Core Pricing model used as a data contract for our BI Solution"
     columns:
       - name: sylvera_id
         description: "Unique internal identifier for project."
