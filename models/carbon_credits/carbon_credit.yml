@@ -27,3 +27,34 @@ models:
       - name: latest_pricing
         description: "The Latest pricing reported on the project. All vintage blended"
 
+  - name: core_pricing
+    description: "Intermediary Model of the pricing information for carbon credits. This model is enriching the pricing table with project data and rating data"
+    columns:
+      - name: sylvera_id
+        description: "Unique internal identifier for project."
+      - name: priced_at
+        description: "Estimated priced at date in UTC."
+      - name: high_float
+        description: "Highest price recorded in dollars."
+      - name: low_float
+        description: "Lowest price recorded in dollars."
+      - name: vintage
+        description: "Vintage of credits."
+      - name: project_name
+        description: "Name for the project, as given by the registry."
+      - name: registry_name
+        description: "Name of the registry the project is from."
+      - name: country
+        description: "Project country as given by the registry."
+      - name: category
+        description: "The Sylvera standardized category corresponding to the category found for this project on the registry."
+      - name: subcategory
+        description: "The Sylvera standardized subcategory corresponding to the subcategory found for this project on the registry."
+      - name: offset_type
+        description: "Type of the offsets associated with this project category."
+      - name: rating
+        description: "Sylvera letter rating i.e. 'AAA', 'AA', 'A' etc."
+      - name: rating_date
+        description: "The date on which the rating was first generated."
+      - name: latest_pricing
+        description: "The Latest pricing reported on the project. All vintage blended"
