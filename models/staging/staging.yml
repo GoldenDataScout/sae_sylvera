@@ -39,3 +39,13 @@ models:
         description: "Lowest price recorded in dollars."
       - name: vintage
         description: "Vintage of credits."
+
+  - name: ratings
+    description: "Staging data ratings information for projects."
+    columns:
+      - name: sylvera_id
+        description: "Unique internal identifier for project."
+      - name: rating
+        description: "Sylvera letter rating i.e. 'AAA', 'AA', 'A' etc."
+      - name: rating_date
+        description: "The date on which the rating was first generated."
