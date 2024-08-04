@@ -25,3 +25,17 @@ models:
         description: "Sum of the permitted credits for the project."
       - name: offset_type
         description: "Type of the offsets associated with this project category."
+
+  - name: stg_pricing
+    description: "Staging Model of the pricing information for carbon credits."
+    columns:
+      - name: sylvera_id
+        description: "Unique internal identifier for project."
+      - name: priced_at
+        description: "Estimated priced at date in UTC."
+      - name: high_float
+        description: "Highest price recorded in dollars."
+      - name: low_float
+        description: "Lowest price recorded in dollars."
+      - name: vintage
+        description: "Vintage of credits."
