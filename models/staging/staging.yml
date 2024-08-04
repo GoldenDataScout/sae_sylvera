@@ -40,7 +40,7 @@ models:
       - name: vintage
         description: "Vintage of credits."
 
-  - name: ratings
+  - name: stg_ratings
     description: "Staging data ratings information for projects."
     columns:
       - name: sylvera_id
