@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: project
+    database: sylvera_dwh
+    schema: public
+
+    tables:
+      - name: project
+      - name: pricing
+      - name: ratings

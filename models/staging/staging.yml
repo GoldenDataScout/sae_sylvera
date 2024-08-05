@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: stg_projects
+    description: "Staging Model for the carbon credit projects."
+    columns:
+      - name: sylvera_id
+        description: "Unique internal identifier for project."
+        tests:
+          - not_null
+          - unique
+      - name: project_name
+        description: "Name for the project, as given by the registry."
+      - name: registry_name
+        description: "Name of the registry the project is from."
+      - name: country
+        description: "Project country as given by the registry."
+      - name: category
+        description: "The Sylvera standardized category corresponding to the category found for this project on the registry."
+      - name: subcategory
+        description: "The Sylvera standardized subcategory corresponding to the subcategory found for this project on the registry."
+      - name: retired_total
+        description: "Sum of the retired credits for the project."
+      - name: permitted_total
+        description: "Sum of the permitted credits for the project."
+      - name: offset_type
+        description: "Type of the offsets associated with this project category."
+
+  - name: stg_pricing
+    description: "Staging Model of the pricing information for carbon credits."
+    columns:
+      - name: sylvera_id
+        description: "Unique internal identifier for project."
+      - name: priced_at
+        description: "Estimated priced at date in UTC."
+      - name: high_float
+        description: "Highest price recorded in dollars."
+      - name: low_float
+        description: "Lowest price recorded in dollars."
+      - name: vintage
+        description: "Vintage of credits."
+
+  - name: stg_ratings
+    description: "Staging data ratings information for projects."
+    columns:
+      - name: sylvera_id
+        description: "Unique internal identifier for project."
+      - name: rating
+        description: "Sylvera letter rating i.e. 'AAA', 'AA', 'A' etc."
+      - name: rating_date
+        description: "The date on which the rating was first generated."
